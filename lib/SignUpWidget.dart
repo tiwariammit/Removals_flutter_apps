@@ -48,19 +48,10 @@ class SignUpWidgetState extends State<SignUpWidget> {
               child: Image.asset("assets/image/deliveryTruck.png"),
                   ),
 
-              const SizedBox(height: 10,),
               RemovalTextField(nameTEC, true, HexColor(textfieldFillColor), HexColor(buttonColor), name),
-
-              const SizedBox(height: 10,),
               RemovalTextField(emailTEC, false, HexColor(textfieldFillColor), HexColor(buttonColor), email),
-
-              const SizedBox(height: 10,),
               RemovalTextField(phoneTEC, false, HexColor(textfieldFillColor), HexColor(buttonColor), phone),
-
-              const SizedBox(height: 10,),
               RemovalTextField(passwordTEC, false, HexColor(textfieldFillColor), HexColor(buttonColor), password),
-
-              const SizedBox(height: 10,),
               RemovalTextField(pinTEC, false, HexColor(textfieldFillColor), HexColor(buttonColor), pin),
 
               const SizedBox(height: 20,),
