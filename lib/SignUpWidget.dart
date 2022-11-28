@@ -36,7 +36,7 @@ class SignUpWidgetState extends State<SignUpWidget> {
       ),
       body:
       Padding(
-        padding: EdgeInsets.fromLTRB(30, 0, 30, 0),
+        padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
         child: SingleChildScrollView(
           child: Column(
             // mainAxisAlignment: AxisDirection.,
@@ -46,14 +46,14 @@ class SignUpWidgetState extends State<SignUpWidget> {
               child: Image.asset("assets/image/deliveryTruck.png"),
                   ),
 
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
 
               TextField(
                 controller: nameTEC,
                 textAlign: TextAlign.center,
                 autofocus: true,
                 textInputAction: TextInputAction.next,
-                style: TextStyle(
+                style: const TextStyle(
                   letterSpacing: 2,
                   fontWeight: FontWeight.bold,
                   height: 0.7,
@@ -61,115 +61,125 @@ class SignUpWidgetState extends State<SignUpWidget> {
                 decoration: InputDecoration(
                     filled: true,
                     fillColor: HexColor(textfieldFillColor),
-                    border: OutlineInputBorder(
+                    border: const OutlineInputBorder(
                       borderSide: BorderSide.none,
-                      // borderRadius: BorderRadius.circular(0)
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: HexColor(buttonColor), width: 2),
                     ),
                     hintText: name,
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                       letterSpacing: 2,
                       fontWeight: FontWeight.bold,
                     )
                 ),
               ),
 
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               TextField(
                 textInputAction: TextInputAction.next,
                 controller: emailTEC,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   letterSpacing: 2,
                   fontWeight: FontWeight.bold,
                 ),
                 decoration: InputDecoration(
                   filled: true,
                   fillColor: HexColor(textfieldFillColor),//Colors.grey[350],
-                  border: OutlineInputBorder(
+                  border: const OutlineInputBorder(
                       borderSide: BorderSide.none,
-                      // borderRadius: BorderRadius.circular(0)
                   ),
-                  hintText: email,
-                  hintStyle: TextStyle(
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: HexColor(buttonColor), width: 2),
+                  ),
+                    hintText: email,
+                    hintStyle: const TextStyle(
                     letterSpacing: 2,
                     fontWeight: FontWeight.bold,
                   )
                 ),
               ),
 
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               TextField(
                 textInputAction: TextInputAction.next,
                 controller: phoneTEC,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   letterSpacing: 2,
                   fontWeight: FontWeight.bold,
                 ),
                 decoration: InputDecoration(
                     filled: true,
                     fillColor: HexColor(textfieldFillColor),//Colors.grey[350],
-                    border: OutlineInputBorder(
+                    border: const OutlineInputBorder(
                       borderSide: BorderSide.none,
-                      // borderRadius: BorderRadius.circular(0)
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: HexColor(buttonColor), width: 2),
                     ),
                     hintText: phone,
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                       letterSpacing: 2,
                       fontWeight: FontWeight.bold,
                     )
                 ),
               ),
 
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               TextField(
                 textInputAction: TextInputAction.next,
                 controller: passwordTEC,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   letterSpacing: 2,
                   fontWeight: FontWeight.bold,
                 ),
                 decoration: InputDecoration(
                     filled: true,
                     fillColor: HexColor(textfieldFillColor),//Colors.grey[350],
-                    border: OutlineInputBorder(
+                    border: const OutlineInputBorder(
                       borderSide: BorderSide.none,
-                      // borderRadius: BorderRadius.circular(0)
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: HexColor(buttonColor), width: 2),
                     ),
                     hintText: password,
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                       letterSpacing: 2,
                       fontWeight: FontWeight.bold,
                     )
                 ),
               ),
 
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               TextField(
                 textInputAction: TextInputAction.next,
                 controller: pinTEC,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   letterSpacing: 2,
                   fontWeight: FontWeight.bold,
                 ),
                 decoration: InputDecoration(
                     filled: true,
                     fillColor: HexColor(textfieldFillColor),//Colors.grey[350],
-                    border: OutlineInputBorder(
+                    border: const OutlineInputBorder(
                       borderSide: BorderSide.none,
-                      // borderRadius: BorderRadius.circular(0)
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: HexColor(buttonColor), width: 2),
                     ),
                     hintText: pin,
-                    hintStyle: TextStyle(
+                    hintStyle: const TextStyle(
                       letterSpacing: 2,
                       fontWeight: FontWeight.bold,
                     )
                 ),
               ),
 
-              SizedBox(height: 30,),
+              const SizedBox(height: 30,),
               Container(
                 height: 50,
                 child: ElevatedButton(onPressed: (){},
@@ -177,7 +187,7 @@ class SignUpWidgetState extends State<SignUpWidget> {
                     backgroundColor: MaterialStateProperty.all(HexColor(buttonColor)
                     ),
                   ),
-                    child: Text("Sign Up",
+                    child: const Text("Sign Up",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         letterSpacing: 2,
