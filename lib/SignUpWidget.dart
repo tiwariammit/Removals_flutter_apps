@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:removals_flutter_app/Helper/ExtendedClass/HexColor.dart';
+import 'package:removals_flutter_app/Helper/ExtendedClass/RemovalButton.dart';
+
 
 class SignUpWidget extends StatefulWidget {
   const SignUpWidget({Key? key}) : super(key: key);
@@ -181,21 +183,10 @@ class SignUpWidgetState extends State<SignUpWidget> {
               ),
 
               const SizedBox(height: 30,),
-              Container(
-                height: 50,
-                child: ElevatedButton(onPressed: (){},
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(HexColor(buttonColor)
-                    ),
-                  ),
-                    child: const Text("Sign Up",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 2,
-                        fontSize: 20,
-                      ),),
-                ),
-              ),
+
+              RemovalButton("Sign Up", () {
+
+              },HexColor(buttonColor)),
             ],
           ),
         ),
