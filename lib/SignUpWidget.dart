@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:removals_flutter_app/Helper/ExtendedClass/HexColor.dart';
 import 'package:removals_flutter_app/Helper/ExtendedClass/RemovalButton.dart';
-
+import 'package:removals_flutter_app/Helper/ExtendedClass/RemovalTextField.dart';
 
 class SignUpWidget extends StatefulWidget {
   const SignUpWidget({Key? key}) : super(key: key);
@@ -49,140 +49,21 @@ class SignUpWidgetState extends State<SignUpWidget> {
                   ),
 
               const SizedBox(height: 10,),
-
-              TextField(
-                controller: nameTEC,
-                textAlign: TextAlign.center,
-                autofocus: true,
-                textInputAction: TextInputAction.next,
-                style: const TextStyle(
-                  letterSpacing: 2,
-                  fontWeight: FontWeight.bold,
-                  height: 0.7,
-                ),
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: HexColor(textfieldFillColor),
-                    border: const OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: HexColor(buttonColor), width: 2),
-                    ),
-                    hintText: name,
-                    hintStyle: const TextStyle(
-                      letterSpacing: 2,
-                      fontWeight: FontWeight.bold,
-                    )
-                ),
-              ),
+              RemovalTextField(nameTEC, true, HexColor(textfieldFillColor), HexColor(buttonColor), name),
 
               const SizedBox(height: 10,),
-              TextField(
-                textInputAction: TextInputAction.next,
-                controller: emailTEC,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  letterSpacing: 2,
-                  fontWeight: FontWeight.bold,
-                ),
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: HexColor(textfieldFillColor),//Colors.grey[350],
-                  border: const OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: HexColor(buttonColor), width: 2),
-                  ),
-                    hintText: email,
-                    hintStyle: const TextStyle(
-                    letterSpacing: 2,
-                    fontWeight: FontWeight.bold,
-                  )
-                ),
-              ),
+              RemovalTextField(emailTEC, false, HexColor(textfieldFillColor), HexColor(buttonColor), email),
 
               const SizedBox(height: 10,),
-              TextField(
-                textInputAction: TextInputAction.next,
-                controller: phoneTEC,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  letterSpacing: 2,
-                  fontWeight: FontWeight.bold,
-                ),
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: HexColor(textfieldFillColor),//Colors.grey[350],
-                    border: const OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: HexColor(buttonColor), width: 2),
-                    ),
-                    hintText: phone,
-                    hintStyle: const TextStyle(
-                      letterSpacing: 2,
-                      fontWeight: FontWeight.bold,
-                    )
-                ),
-              ),
+              RemovalTextField(phoneTEC, false, HexColor(textfieldFillColor), HexColor(buttonColor), phone),
 
               const SizedBox(height: 10,),
-              TextField(
-                textInputAction: TextInputAction.next,
-                controller: passwordTEC,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  letterSpacing: 2,
-                  fontWeight: FontWeight.bold,
-                ),
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: HexColor(textfieldFillColor),//Colors.grey[350],
-                    border: const OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: HexColor(buttonColor), width: 2),
-                    ),
-                    hintText: password,
-                    hintStyle: const TextStyle(
-                      letterSpacing: 2,
-                      fontWeight: FontWeight.bold,
-                    )
-                ),
-              ),
+              RemovalTextField(passwordTEC, false, HexColor(textfieldFillColor), HexColor(buttonColor), password),
 
               const SizedBox(height: 10,),
-              TextField(
-                textInputAction: TextInputAction.next,
-                controller: pinTEC,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  letterSpacing: 2,
-                  fontWeight: FontWeight.bold,
-                ),
-                decoration: InputDecoration(
-                    filled: true,
-                    fillColor: HexColor(textfieldFillColor),
-                    // border: InputBorder.none,
-                    border: const OutlineInputBorder(
-                      borderSide: BorderSide.none,
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: HexColor(buttonColor), width: 2),
-                    ),
-                    hintText: pin,
-                    hintStyle: const TextStyle(
-                      letterSpacing: 2,
-                      fontWeight: FontWeight.bold,
-                    )
-                ),
-              ),
+              RemovalTextField(pinTEC, false, HexColor(textfieldFillColor), HexColor(buttonColor), pin),
 
-              const SizedBox(height: 30,),
+              const SizedBox(height: 20,),
 
               RemovalButton("Sign Up", () {
 
