@@ -164,7 +164,8 @@ class SignUpWidgetState extends State<SignUpWidget> {
                 ),
                 decoration: InputDecoration(
                     filled: true,
-                    fillColor: HexColor(textfieldFillColor),//Colors.grey[350],
+                    fillColor: HexColor(textfieldFillColor),
+                    // border: InputBorder.none,
                     border: const OutlineInputBorder(
                       borderSide: BorderSide.none,
                     ),

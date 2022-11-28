@@ -3,7 +3,7 @@ import 'package:removals_flutter_app/Helper/ExtendedClass/HexColor.dart';
 import 'package:removals_flutter_app/LoginWithPinWidget.dart';
 import 'package:removals_flutter_app/SignUpWidget.dart';
 import 'package:removals_flutter_app/Helper/ExtendedClass/HexColor.dart';
-
+import 'package:removals_flutter_app/Helper/ExtendedClass/RemovalButton.dart';
 
 void main() {
 
@@ -36,59 +36,22 @@ class HomeWidgetState extends State<HomeWidget> {
           padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
-
             mainAxisAlignment: MainAxisAlignment.center,
 
             children: [
               Image.asset('assets/image/deliveryTruck.png'),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
-                child: SizedBox(
-                  height: 70,
-                  child: ElevatedButton(onPressed: (){
-                    Navigator.push(context, 
-                      MaterialPageRoute(builder: (context) => LoginWithPinWidget())
-                    );
+              RemovalButton("Login with PIN", () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => LoginWithPinWidget())
+                );
+              },HexColor(buttonColor)),
 
-                  },
-                    child: Text("Login with PIN",
-                      style: TextStyle(
-                        // fontWeight: FontWeight.bold,
-                        fontSize: 30,
-                        letterSpacing: 2,
-                      ),
-                    ),
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(HexColor(buttonColor)),
-
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
-                child: SizedBox(
-                  height: 70,
-                  child: ElevatedButton(onPressed: (){
-                    Navigator.push(
-                        context,
-                      MaterialPageRoute(builder: (context) => SignUpWidget())
-                    );
-                  },
-                    child: Text("Sign UP",
-                      style: TextStyle(
-                        // fontWeight: FontWeight.bold,
-                        fontSize: 30,
-                        letterSpacing: 2,
-                      ),
-                    ),
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(HexColor(buttonColor)),
-
-                    ),
-                  ),
-                ),
-              ),
+              RemovalButton("Sign Up", () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SignUpWidget())
+                );
+              },HexColor(buttonColor)),
             ],
           )
       ),
