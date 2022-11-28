@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:removals_flutter_app/Helper/ExtendedClass/HexColor.dart';
+import 'package:removals_flutter_app/SignUpWidget.dart';
+import 'package:removals_flutter_app/Helper/ExtendedClass/HexColor.dart';
 
 
 void main() {
@@ -20,6 +23,8 @@ class HomeWidget extends StatefulWidget {
 
 class HomeWidgetState extends State<HomeWidget> {
 
+  final String buttonColor = "#255E90";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +44,6 @@ class HomeWidgetState extends State<HomeWidget> {
 
             children: [
               Image.asset('assets/image/deliveryTruck.png'),
-
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
                 child: SizedBox(
@@ -55,6 +59,7 @@ class HomeWidgetState extends State<HomeWidget> {
                       ),
                     ),
                     style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(HexColor(buttonColor)),
 
                     ),
                   ),
@@ -65,7 +70,10 @@ class HomeWidgetState extends State<HomeWidget> {
                 child: SizedBox(
                   height: 70,
                   child: ElevatedButton(onPressed: (){
-
+                    Navigator.push(
+                        context,
+                      MaterialPageRoute(builder: (context) => SignUpWidget())
+                    );
                   },
                     child: Text("Sign UP",
                       style: TextStyle(
@@ -75,6 +83,7 @@ class HomeWidgetState extends State<HomeWidget> {
                       ),
                     ),
                     style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(HexColor(buttonColor)),
 
                     ),
                   ),
