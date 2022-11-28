@@ -51,6 +51,8 @@ class SignUpWidgetState extends State<SignUpWidget> {
               TextField(
                 controller: nameTEC,
                 textAlign: TextAlign.center,
+                autofocus: true,
+                textInputAction: TextInputAction.next,
                 style: TextStyle(
                   letterSpacing: 2,
                   fontWeight: FontWeight.bold,
@@ -73,6 +75,7 @@ class SignUpWidgetState extends State<SignUpWidget> {
 
               SizedBox(height: 10,),
               TextField(
+                textInputAction: TextInputAction.next,
                 controller: emailTEC,
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -96,6 +99,7 @@ class SignUpWidgetState extends State<SignUpWidget> {
 
               SizedBox(height: 10,),
               TextField(
+                textInputAction: TextInputAction.next,
                 controller: phoneTEC,
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -119,6 +123,7 @@ class SignUpWidgetState extends State<SignUpWidget> {
 
               SizedBox(height: 10,),
               TextField(
+                textInputAction: TextInputAction.next,
                 controller: passwordTEC,
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -142,6 +147,7 @@ class SignUpWidgetState extends State<SignUpWidget> {
 
               SizedBox(height: 10,),
               TextField(
+                textInputAction: TextInputAction.next,
                 controller: pinTEC,
                 textAlign: TextAlign.center,
                 style: TextStyle(

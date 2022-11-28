@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:removals_flutter_app/Helper/ExtendedClass/HexColor.dart';
+import 'package:removals_flutter_app/LoginWithPinWidget.dart';
 import 'package:removals_flutter_app/SignUpWidget.dart';
 import 'package:removals_flutter_app/Helper/ExtendedClass/HexColor.dart';
 
@@ -31,11 +32,7 @@ class HomeWidgetState extends State<HomeWidget> {
       // appBar: AppBar(
       //
       // ),
-      body:
-      // Container(
-      //   padding: EdgeInsets.fromLTRB(30, 40, 30, 40),
-      //   child: (
-      Padding(
+      body: Padding(
           padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -49,6 +46,9 @@ class HomeWidgetState extends State<HomeWidget> {
                 child: SizedBox(
                   height: 70,
                   child: ElevatedButton(onPressed: (){
+                    Navigator.push(context, 
+                      MaterialPageRoute(builder: (context) => LoginWithPinWidget())
+                    );
 
                   },
                     child: Text("Login with PIN",
@@ -92,9 +92,6 @@ class HomeWidgetState extends State<HomeWidget> {
             ],
           )
       ),
-
-      // ),
-      //     ),
     );
   }
 }
