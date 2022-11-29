@@ -22,7 +22,7 @@ class RemovalButton extends StatelessWidget {
             color: backgroundColor,
             child: MaterialButton(
               minWidth: 250,
-              onPressed: onPress, // add this here
+              onPressed: onPress,
               child: Text(text,
                   textAlign: TextAlign.center,
                   style: const TextStyle(

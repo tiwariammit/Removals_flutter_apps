@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:removals_flutter_app/Helper/ExtendedClass/HexColor.dart';
+import 'package:removals_flutter_app/Helper/RemovalsColorName.dart';
 import 'package:removals_flutter_app/LoginWithPinWidget.dart';
 import 'package:removals_flutter_app/SignUpWidget.dart';
 import 'package:removals_flutter_app/Helper/ExtendedClass/HexColor.dart';
 import 'package:removals_flutter_app/Helper/ExtendedClass/RemovalButton.dart';
 
 void main() {
-
   runApp(const MaterialApp(
     home: HomeWidget(),
   ));
@@ -24,7 +24,7 @@ class HomeWidget extends StatefulWidget {
 
 class HomeWidgetState extends State<HomeWidget> {
 
-  final String buttonColor = "#255E90";
+  final Color buttonColor = RemovalsColorName.buttonColor;
 
   @override
   Widget build(BuildContext context) {
@@ -44,14 +44,14 @@ class HomeWidgetState extends State<HomeWidget> {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => LoginWithPinWidget())
                 );
-              },HexColor(buttonColor)),
+              },buttonColor),
 
               RemovalButton("Sign Up", () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => SignUpWidget())
                 );
-              },HexColor(buttonColor)),
+              },buttonColor),
             ],
           )
       ),
