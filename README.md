@@ -2,12 +2,19 @@
 
 This is a simple flutter application shows how to make a view.
 This app contains 3 view, first is home page
+
 Starting Page
 
+https://user-images.githubusercontent.com/22368948/204707571-fe4b191f-7d9e-4dfd-8714-a222b9b8f95b.png
+
 Login with PIN
-https://user-images.githubusercontent.com/22368948/204706670-1e1d9f12-5b56-461e-b2e3-891b97dd523c.png
+
+https://user-images.githubusercontent.com/22368948/204707565-f84a814c-07eb-450b-bf80-a3af48082a75.png
 
 and Sign Up page.
+
+https://user-images.githubusercontent.com/22368948/204706670-1e1d9f12-5b56-461e-b2e3-891b97dd523c.png
+
 
 
 
