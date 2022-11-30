@@ -23,7 +23,7 @@ class _DialDisplayViewState extends State<DialDisplayView> {
                 crossAxisCount: 4,
                 crossAxisSpacing: 10,
               childAspectRatio: 3/2.5,
-
+              shrinkWrap: true,
               children: findView(4, widget.dialPinArray),
             ),
           );

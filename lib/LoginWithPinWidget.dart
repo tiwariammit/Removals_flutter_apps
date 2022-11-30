@@ -44,8 +44,8 @@ class LoginWithPinWidgetState extends State<LoginWithPinWidget> {
             const SizedBox(height: 5),
 
             Container(
-              height: 100,
-              width: 100,//MediaQuery.of(context).size.width * 0.55,
+              height: 50,
+              width: MediaQuery.of(context).size.width * 0.55,
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: RemovalsColorName.textfieldFillColor,
