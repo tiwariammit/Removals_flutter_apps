@@ -5,17 +5,16 @@ This app contains 3 view, first is home page
 
 Starting Page
 
-https://user-images.githubusercontent.com/22368948/204707571-fe4b191f-7d9e-4dfd-8714-a222b9b8f95b.png
+<img width="320" alt="homepage" src="https://user-images.githubusercontent.com/22368948/204709285-175f918a-84a3-4e05-8aeb-6bb24c021d94.png">
 
 Login with PIN
 
-https://user-images.githubusercontent.com/22368948/204707565-f84a814c-07eb-450b-bf80-a3af48082a75.png
+<img width="321" alt="pin" src="https://user-images.githubusercontent.com/22368948/204709281-aff417df-17c9-40ed-81f1-ba8ed53b311d.png">
 
 and Sign Up page.
 
-https://user-images.githubusercontent.com/22368948/204706670-1e1d9f12-5b56-461e-b2e3-891b97dd523c.png
-
-
+<img width="321" alt="Screen Shot 2022-11-30 at 3 41 24 pm" src="https://user-images.githubusercontent.com/22368948/204709274-51f5daa6-b99d-4816-8051-8eee360bfeea.png">
+<img width="346" alt="signUpKeyboard" src="https://user-images.githubusercontent.com/22368948/204709288-c0874683-d6b7-4ae4-b820-3b36d4f748db.png">
 
 
 ## Getting Started
