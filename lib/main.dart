@@ -29,9 +29,6 @@ class HomeWidgetState extends State<HomeWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //
-      // ),
       body: Padding(
           padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
           child: Column(

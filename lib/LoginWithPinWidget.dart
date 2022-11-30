@@ -20,9 +20,8 @@ class LoginWithPinWidgetState extends State<LoginWithPinWidget> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // resizeToAvoidBottomInset: false,
         backgroundColor: removalBackgroundColor,
-        appBar: AppBar(),
+        // appBar: AppBar(),
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
