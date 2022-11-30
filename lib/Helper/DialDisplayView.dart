@@ -5,7 +5,7 @@ import 'package:removals_flutter_app/Helper/RemovalsColorName.dart';
 import 'package:flutter/material.dart';
 
 class DialDisplayView extends StatefulWidget {
-  var dialPinArray = [1,2,3];
+  List<int> dialPinArray = [];
 
   DialDisplayView(this.dialPinArray, {super.key});
 
@@ -66,50 +66,3 @@ class DialDisplay extends StatelessWidget {
     );
   }
 }
-
-
-// class DialDisplayView extends StatefulWidget {
-//   var dialPinArray = [];
-//   final int maxCount;
-//   // final Color backgroundColor;
-//   // final Color selectedColor;
-//
-//    DialDisplayView(this.dialPinArray, this.maxCount, {super.key});
-//
-//   @override
-//   State<DialDisplayView> createState() => _DialDisplayViewState();
-// }
-//
-// class _DialDisplayViewState extends State<DialDisplayView> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Center(
-//         child: SizedBox(
-//           // width: 100,
-//           // height: 100,
-//
-//           child: GridView.builder(
-//             itemCount: widget.maxCount,
-//
-//               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-//                 crossAxisCount: widget.maxCount,
-//                 crossAxisSpacing: 10,
-//               ),
-//               itemBuilder: (BuildContext context, int index) => findView(index, widget.dialPinArray)
-//           )
-//         ));
-//   }
-//
-//   Widget findView(int index, var val) {
-//
-//     return Container(
-//       height: 30,
-//       width: 30,
-//       color: Colors.black,
-//       child: const Text('1'),
-//     );
-//
-//     }
-// }
-
-

@@ -15,7 +15,7 @@ class LoginWithPinWidget extends StatefulWidget {
 class LoginWithPinWidgetState extends State<LoginWithPinWidget> {
   Color removalBackgroundColor = HexColor("#4887BF");
   var pinDisplayArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "Forget", "0", "x"];
-  var dialPinArray = [1,2,3];
+  List<int> dialPinArray = [];
 
   @override
   Widget build(BuildContext context) {
@@ -67,7 +67,17 @@ class LoginWithPinWidgetState extends State<LoginWithPinWidget> {
                   padding: const EdgeInsets.fromLTRB(10, 20, 10, 20),
                   itemBuilder: (BuildContext context, int index) => DialKey(
                       pinDisplayArray[index], pinDisplayArray[index], RemovalsColorName.buttonColor,
-                          () {}
+                          () {
+                            setState(() {
+
+                              if (dialPinArray.length < 4){
+                                dialPinArray.add(1);
+                              }else{
+                                print("object");
+                              }
+                            });
+
+                          }
                   ),
               ),
             ),
