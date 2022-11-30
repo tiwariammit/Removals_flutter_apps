@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:removals_flutter_app/Helper/DialKey.dart';
 import 'package:removals_flutter_app/Helper/ExtendedClass/HexColor.dart';
 import 'package:removals_flutter_app/Helper/RemovalsColorName.dart';
-
+import 'package:removals_flutter_app/Helper/DialDisplayView.dart';
 
 class LoginWithPinWidget extends StatefulWidget {
   const LoginWithPinWidget({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class LoginWithPinWidget extends StatefulWidget {
 class LoginWithPinWidgetState extends State<LoginWithPinWidget> {
   Color removalBackgroundColor = HexColor("#4887BF");
   var pinDisplayArray = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "Forget", "0", "x"];
-  var dialPinArray = [];
+  var dialPinArray = [1,2,3];
 
   @override
   Widget build(BuildContext context) {
@@ -42,24 +43,15 @@ class LoginWithPinWidgetState extends State<LoginWithPinWidget> {
             ),
             const SizedBox(height: 5),
 
-            SizedBox(
-              height: 50,
-              width: MediaQuery.of(context).size.width * 0.55,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: RemovalsColorName.textfieldFillColor,
-                  borderRadius: const BorderRadius.all(Radius.circular(20)),
-                ),
-                child: GridView.builder(
-                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 4,
-                      crossAxisSpacing: 10,
-
-                    ),
-                    shrinkWrap: true,
-                    itemBuilder: (BuildContext context, int index) => DialKey("1", "1", RemovalsColorName.buttonColor, () { })
-                ),
+            Container(
+              height: 100,
+              width: 100,//MediaQuery.of(context).size.width * 0.55,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: RemovalsColorName.textfieldFillColor,
+                borderRadius: const BorderRadius.all(Radius.circular(20)),
               ),
+              child: DialDisplayView(dialPinArray),
             ),
 
             Expanded(
@@ -74,7 +66,10 @@ class LoginWithPinWidgetState extends State<LoginWithPinWidget> {
                   shrinkWrap: true,
                   padding: const EdgeInsets.fromLTRB(10, 20, 10, 20),
                   itemBuilder: (BuildContext context, int index) => DialKey(
-                      pinDisplayArray[index], pinDisplayArray[index], RemovalsColorName.buttonColor, () {})),
+                      pinDisplayArray[index], pinDisplayArray[index], RemovalsColorName.buttonColor,
+                          () {}
+                  ),
+              ),
             ),
           ],
         ));
