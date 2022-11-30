@@ -13,7 +13,7 @@ class RemovalButton extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 30),
       child: SizedBox(
-        height: 70,
+        height: 60,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 0.0),
           child: Material(

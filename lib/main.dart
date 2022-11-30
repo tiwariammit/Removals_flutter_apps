@@ -23,34 +23,31 @@ class HomeWidget extends StatefulWidget {
 }
 
 class HomeWidgetState extends State<HomeWidget> {
-
   final Color buttonColor = RemovalsColorName.buttonColor;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-          padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.center,
-
-            children: [
-              Image.asset('assets/image/deliveryTruck.png'),
-              RemovalButton("Login with PIN", () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => LoginWithPinWidget())
-                );
-              },buttonColor),
-
-              RemovalButton("Sign Up", () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => SignUpWidget())
-                );
-              },buttonColor),
-            ],
-          )
+      body: SafeArea(
+        child: Padding(
+            padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset('assets/image/deliveryTruck.png'),
+                RemovalButton("Login with PIN", () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => LoginWithPinWidget()));
+                }, buttonColor),
+                RemovalButton("Sign Up", () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SignUpWidget()));
+                }, buttonColor),
+              ],
+            )),
       ),
     );
   }

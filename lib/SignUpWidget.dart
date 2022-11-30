@@ -36,29 +36,31 @@ class SignUpWidgetState extends State<SignUpWidget> {
       // appBar: AppBar(
       //
       // ),
-      body: Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
-        child: Center(
-          child: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                AspectRatio(aspectRatio: 2.5/1,
-                child: Image.asset("assets/image/deliveryTruck.png"),
-                    ),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+          child: Center(
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  AspectRatio(aspectRatio: 2.5/1,
+                  child: Image.asset("assets/image/deliveryTruck.png"),
+                      ),
 
-                RemovalTextField(emailTEC, false, textfieldFillColor, buttonColor, email),
-                RemovalTextField(nameTEC, true, textfieldFillColor, buttonColor, name),
-                RemovalTextField(phoneTEC, false, textfieldFillColor, buttonColor, phone),
-                RemovalTextField(passwordTEC, false, textfieldFillColor, buttonColor, password),
-                RemovalTextField(pinTEC, false, textfieldFillColor, buttonColor, pin),
+                  RemovalTextField(emailTEC, false, textfieldFillColor, buttonColor, email),
+                  RemovalTextField(nameTEC, true, textfieldFillColor, buttonColor, name),
+                  RemovalTextField(phoneTEC, false, textfieldFillColor, buttonColor, phone),
+                  RemovalTextField(passwordTEC, false, textfieldFillColor, buttonColor, password),
+                  RemovalTextField(pinTEC, false, textfieldFillColor, buttonColor, pin),
 
-                const SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
 
-                RemovalButton("Sign Up", () {
+                  RemovalButton("Sign Up", () {
 
-                },buttonColor),
-              ],
+                  },buttonColor),
+                ],
+              ),
             ),
           ),
         ),

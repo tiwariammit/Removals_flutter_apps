@@ -4,16 +4,11 @@ import 'package:removals_flutter_app/Helper/RemovalsColorName.dart';
 
 import 'package:flutter/material.dart';
 
-class DialDisplayView extends StatefulWidget {
+class DialDisplayView extends StatelessWidget {
   List<int> dialPinArray = [];
 
   DialDisplayView(this.dialPinArray, {super.key});
 
-  @override
-  State<DialDisplayView> createState() => _DialDisplayViewState();
-}
-
-class _DialDisplayViewState extends State<DialDisplayView> {
   @override
   Widget build(BuildContext context) {
     return
@@ -24,7 +19,7 @@ class _DialDisplayViewState extends State<DialDisplayView> {
                 crossAxisSpacing: 10,
               childAspectRatio: 3/2.5,
               shrinkWrap: true,
-              children: findView(4, widget.dialPinArray),
+              children: findView(4, dialPinArray),
             ),
           );
   }
