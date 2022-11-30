@@ -5,10 +5,10 @@ import 'package:removals_flutter_app/Helper/RemovalsColorName.dart';
 class DialKey extends StatelessWidget {
   final String number;
   final void Function()? onPress;
-  final String heroTag;
+  // final String heroTag;
   final Color backgroundColor;
 
-  const DialKey(this.number, this.heroTag, this.backgroundColor, this.onPress, {super.key});
+  const DialKey(this.number, this.backgroundColor, this.onPress, {super.key});
 
   @override
   Widget build(BuildContext context) {

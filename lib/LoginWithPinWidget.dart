@@ -66,17 +66,26 @@ class LoginWithPinWidgetState extends State<LoginWithPinWidget> {
                   shrinkWrap: true,
                   padding: const EdgeInsets.fromLTRB(10, 20, 10, 20),
                   itemBuilder: (BuildContext context, int index) => DialKey(
-                      pinDisplayArray[index], pinDisplayArray[index], RemovalsColorName.buttonColor,
-                          () {
+                      pinDisplayArray[index],
+                      RemovalsColorName.buttonColor, () {
                             setState(() {
-
-                              if (dialPinArray.length < 4){
-                                dialPinArray.add(1);
-                              }else{
-                                print("object");
+                              var pressedKey = pinDisplayArray[index];
+                              switch (pressedKey) {
+                                case "x":
+                                  if (dialPinArray.isNotEmpty){
+                                    dialPinArray.removeLast();
+                                  }
+                                  break;
+                                case "Forget":
+                                  print("forget page goes here");
+                                  break;
+                                default:
+                                  if (dialPinArray.length < 4){
+                                    dialPinArray.add(1);
+                                    print("Pressed value is $pressedKey");
+                                  }
                               }
                             });
-
                           }
                   ),
               ),
